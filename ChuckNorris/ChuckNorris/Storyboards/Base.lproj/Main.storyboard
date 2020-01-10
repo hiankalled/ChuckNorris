@@ -163,8 +163,112 @@
             </objects>
             <point key="canvasLocation" x="-242" y="17"/>
         </scene>
+        <!--Search View Controller-->
+        <scene sceneID="hnV-98-ZST">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="tWz-1O-Cgc" customClass="SearchViewController" customModule="ChuckNorris" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ajm-wF-WE5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter your search term" translatesAutoresizingMaskIntoConstraints="NO" id="ry7-gY-RsL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggestions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjv-oF-6LJ">
+                                <rect key="frame" x="16" y="116" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4k9-cw-xRI" customClass="TagListView" customModule="TagListView">
+                                <rect key="frame" x="16" y="153" width="382" height="28"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
+                                        <color key="value" red="0.2801012993" green="0.62375682590000003" blue="0.97259396310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingY">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingX">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="marginY">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="marginX">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tagHighlightedBackgroundColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past Searches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0J-uj-jFz">
+                                <rect key="frame" x="16" y="197" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ftl-Vv-eDV">
+                                <rect key="frame" x="0.0" y="234" width="414" height="628"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellSearches" id="HoE-B1-2Q6">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HoE-B1-2Q6" id="4uK-YQ-m7C">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I0J-uj-jFz" firstAttribute="leading" secondItem="TD9-da-rAt" secondAttribute="leading" constant="16" id="6T5-6y-KO2"/>
+                            <constraint firstItem="Hjv-oF-6LJ" firstAttribute="top" secondItem="ry7-gY-RsL" secondAttribute="bottom" constant="16" id="9Xv-Nq-Xhs"/>
+                            <constraint firstItem="4k9-cw-xRI" firstAttribute="top" secondItem="Hjv-oF-6LJ" secondAttribute="bottom" constant="16" id="Erq-YQ-Dfh"/>
+                            <constraint firstItem="Hjv-oF-6LJ" firstAttribute="leading" secondItem="TD9-da-rAt" secondAttribute="leading" constant="16" id="Ha4-Pz-2kl"/>
+                            <constraint firstItem="4k9-cw-xRI" firstAttribute="leading" secondItem="TD9-da-rAt" secondAttribute="leading" constant="16" id="MXi-aW-2Ka"/>
+                            <constraint firstItem="TD9-da-rAt" firstAttribute="trailing" secondItem="4k9-cw-xRI" secondAttribute="trailing" constant="16" id="O1a-oG-nHP"/>
+                            <constraint firstItem="Ftl-Vv-eDV" firstAttribute="leading" secondItem="TD9-da-rAt" secondAttribute="leading" id="P5Y-Qu-rx5"/>
+                            <constraint firstItem="TD9-da-rAt" firstAttribute="trailing" secondItem="I0J-uj-jFz" secondAttribute="trailing" constant="16" id="QXK-1w-YJF"/>
+                            <constraint firstItem="ry7-gY-RsL" firstAttribute="top" secondItem="TD9-da-rAt" secondAttribute="top" id="RLT-gx-4pU"/>
+                            <constraint firstItem="ry7-gY-RsL" firstAttribute="leading" secondItem="TD9-da-rAt" secondAttribute="leading" id="TPf-Nh-hSA"/>
+                            <constraint firstItem="ry7-gY-RsL" firstAttribute="trailing" secondItem="TD9-da-rAt" secondAttribute="trailing" id="WWU-hJ-3Vb"/>
+                            <constraint firstItem="TD9-da-rAt" firstAttribute="bottom" secondItem="Ftl-Vv-eDV" secondAttribute="bottom" id="Y32-Un-k8Z"/>
+                            <constraint firstItem="Ftl-Vv-eDV" firstAttribute="trailing" secondItem="TD9-da-rAt" secondAttribute="trailing" id="c3C-gU-71a"/>
+                            <constraint firstItem="I0J-uj-jFz" firstAttribute="top" secondItem="4k9-cw-xRI" secondAttribute="bottom" constant="16" id="lzs-QD-Wao"/>
+                            <constraint firstItem="TD9-da-rAt" firstAttribute="trailing" secondItem="Hjv-oF-6LJ" secondAttribute="trailing" constant="16" id="m5X-js-fKI"/>
+                            <constraint firstItem="Ftl-Vv-eDV" firstAttribute="top" secondItem="I0J-uj-jFz" secondAttribute="bottom" constant="16" id="tkR-lt-f4c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TD9-da-rAt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w2e-Gj-319">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="Sc1-fU-b00"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="lbSearches" destination="I0J-uj-jFz" id="MXy-TU-93R"/>
+                        <outlet property="searchBar" destination="ry7-gY-RsL" id="Urq-aT-aZ7"/>
+                        <outlet property="tableViewSearches" destination="Ftl-Vv-eDV" id="gIz-I4-n39"/>
+                        <outlet property="tagView" destination="4k9-cw-xRI" id="C9h-kZ-ubo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="llP-6t-CUi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="15"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="share" width="16" height="16"/>
+        <image name="share" width="128" height="128"/>
     </resources>
 </document>

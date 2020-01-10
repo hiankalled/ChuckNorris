@@ -23,6 +23,11 @@
 		DE35F0EE23C8EEDD0087BCCA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE35F0ED23C8EEDD0087BCCA /* Category.swift */; };
 		DE35F0F023C8EF060087BCCA /* POPAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE35F0EF23C8EF060087BCCA /* POPAlert.swift */; };
 		DE35F0F223C8EF2F0087BCCA /* POPDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE35F0F123C8EF2F0087BCCA /* POPDevice.swift */; };
+		DE35F0F423C8F0ED0087BCCA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE35F0F323C8F0ED0087BCCA /* SearchViewController.swift */; };
+		DE35F0F623C8F1DF0087BCCA /* FactsDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE35F0F523C8F1DF0087BCCA /* FactsDAO.swift */; };
+		DE35F0F823C8F2140087BCCA /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE35F0F723C8F2140087BCCA /* Fact.swift */; };
+		DE35F0FA23C8F23C0087BCCA /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE35F0F923C8F23C0087BCCA /* Search.swift */; };
+		DE35F0FC23C8F27E0087BCCA /* SearchDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE35F0FB23C8F27E0087BCCA /* SearchDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		DE35F0ED23C8EEDD0087BCCA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		DE35F0EF23C8EF060087BCCA /* POPAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POPAlert.swift; sourceTree = "<group>"; };
 		DE35F0F123C8EF2F0087BCCA /* POPDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POPDevice.swift; sourceTree = "<group>"; };
+		DE35F0F323C8F0ED0087BCCA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DE35F0F523C8F1DF0087BCCA /* FactsDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsDAO.swift; sourceTree = "<group>"; };
+		DE35F0F723C8F2140087BCCA /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		DE35F0F923C8F23C0087BCCA /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		DE35F0FB23C8F27E0087BCCA /* SearchDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDAO.swift; sourceTree = "<group>"; };
 		F37291CA7B183D429E777C47 /* Pods_ChuckNorrisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +151,7 @@
 			children = (
 				DE35F0DE23C8EC600087BCCA /* Cells */,
 				DE35F0BE23C899F10087BCCA /* ViewController.swift */,
+				DE35F0F323C8F0ED0087BCCA /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -185,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				DE35F0EA23C8EE900087BCCA /* CategoriesDAO.swift */,
+				DE35F0F523C8F1DF0087BCCA /* FactsDAO.swift */,
+				DE35F0FB23C8F27E0087BCCA /* SearchDAO.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -193,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				DE35F0ED23C8EEDD0087BCCA /* Category.swift */,
+				DE35F0F723C8F2140087BCCA /* Fact.swift */,
+				DE35F0F923C8F23C0087BCCA /* Search.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -376,7 +391,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE35F0F823C8F2140087BCCA /* Fact.swift in Sources */,
 				DE35F0E823C8EDD30087BCCA /* EndPoint.swift in Sources */,
+				DE35F0F423C8F0ED0087BCCA /* SearchViewController.swift in Sources */,
+				DE35F0F623C8F1DF0087BCCA /* FactsDAO.swift in Sources */,
 				DE35F0E323C8ECD60087BCCA /* POPStrings.swift in Sources */,
 				DE35F0BF23C899F10087BCCA /* ViewController.swift in Sources */,
 				DE35F0F223C8EF2F0087BCCA /* POPDevice.swift in Sources */,
@@ -386,6 +404,8 @@
 				DE35F0F023C8EF060087BCCA /* POPAlert.swift in Sources */,
 				DE35F0EB23C8EE900087BCCA /* CategoriesDAO.swift in Sources */,
 				DE35F0EE23C8EEDD0087BCCA /* Category.swift in Sources */,
+				DE35F0FA23C8F23C0087BCCA /* Search.swift in Sources */,
+				DE35F0FC23C8F27E0087BCCA /* SearchDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
